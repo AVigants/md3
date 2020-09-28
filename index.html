@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Grid/Clock</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div><a href="index.html" class="active">HOME</a></div>
+        <div><a href="">STORE</a></div>
+        <div><a href="">ABOUT</a></div>
+        <div><a href="">CONTACT</a></div>
+    </nav>
+    <div class="myContainer">
+        <div id="banner">
+            <h1>SOME WEBSITE</h1>
+            <h2>some slogan</h2>
+        </div>
+        <div id="news">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed numquam perferendis iure magni optio rerum? Dignissimos laborum eius laboriosam fugit maxime sed ab ducimus, vitae necessitatibus. Facere quisquam commodi perferendis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae quas autem laboriosam, maiores soluta sequi mollitia quidem sapiente amet officia deserunt ad molestias odio consequuntur pariatur, omnis nostrum nemo natus?</div>
+
+        <div id="signIn">
+            <h3>Sign In</h3>
+            <form action="">
+                <input type="text" placeholder="username">
+                <br>
+                <input type="text" placeholder="password">
+                <br>
+                <input type="submit" value="Sign in">
+            </form>
+        </div>
+        <div id="register">
+            <h3>Register</h3>
+            <form action="">
+                <input type="text" placeholder="Username">
+                <br>
+                <input type="text" placeholder="First Name">
+                <br>
+                <input type="text" placeholder="Last Name">
+                <br>
+                <input type="password" placeholder="Password">
+                <br>
+                <input type="password" placeholder="Confirm Password">
+                <br>
+                <input type="email" placeholder="Email">
+                <br>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+        <div id="clock">
+            <script>
+                setInterval(() => {
+                    let d = new Date();
+                    let hours = d.getHours();
+                    let mins = d.getMinutes();
+                    let secs = d.getSeconds();
+                    // console.log(`The time is: ${hours} hours ${mins} minutes and ${secs} seconds`);
+                    let out = (`<h3>The time is: ${a(hours)} hours ${a(mins)} minutes and ${a(secs)} seconds</h3>`);
+                    const el = document.getElementById('clock');
+                    el.innerHTML = out;
+                }, 1000);
+
+                function a(b){
+                    return b<10 ? `0${b}` : b;
+                }
+            </script>
+        </div>
+        <div id="top">
+            <h3>Join us!</h3>
+            <p>Promote and follow your favorite artists, get hot news and exclusive selections!</p>
+            <form action="">
+                <input type="email" placeholder="Email">
+                <input type="submit" name="" id="" value="sign up">
+            </form>
+        </div>
+        <div id="img1">
+            <img src="./css/1.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui accusamus ipsa ipsum ad exercitationem cumque veniam aspernatur dolore modi consequatur repellendus optio ut consequuntur soluta reprehenderit nisi, itaque, sit obcaecati!</p>
+        </div>
+        <div id="img2">
+            <img src="./css/2.png" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ratione laborum mollitia magnam deserunt vel quam blanditiis optio, tempora, natus aperiam? Possimus architecto aperiam facilis ipsam doloremque rem excepturi quo.</p>
+        </div>
+        <div id="img3">
+            <img src="./css/3.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum saepe consequatur natus ea ex, harum minima quas, iure a sapiente optio repellendus recusandae hic pariatur eum corporis, esse odio non!</p>
+        </div>
+        <div id="footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet animi error repellendus cumque, voluptatem nisi tenetur unde facere, sit fugit ad. Neque enim omnis ullam, non possimus quis a eos?</div>
+    </div>
+</body>
+</html>

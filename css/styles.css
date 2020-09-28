@@ -1,0 +1,124 @@
+html, body{
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+}
+img{
+    width: 100%;
+}
+.navbar{
+    display:flex;
+    background-color: deepskyblue;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    height: 50px;
+    top:0;
+}
+
+.navbar div a{
+    border: 1px solid #333;
+    border-radius: 3px;
+    text-decoration: none;
+    color:white;
+    padding: 10px;
+    background-color: #333;
+}
+
+
+.navbar div a:hover{
+    color:black;
+    background-color: white;
+}
+
+.myContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+    margin: 2%;
+    grid-template-areas:
+    "banner banner top"
+    "signIn register clock"
+    "news news news"
+    "img1 img2 img3"
+    "footer footer footer";
+}
+#banner{
+    text-align: center;
+    padding: 1rem;
+    grid-area: banner;
+}
+#top{
+    grid-area: top;
+    padding: 1rem;
+    background-color: pink;
+
+}
+input{
+    font-size: 1.2em;
+}
+#signIn{
+    text-align: center;
+    grid-area: signIn;
+    background-color: deepskyblue;
+    padding: 1rem;
+}
+#register{
+    text-align: center;
+    grid-area: register;
+    background-color: bisque;
+    padding: 1rem;
+}
+#clock{
+    grid-area: clock;
+    padding: 1rem;
+    text-align: center;
+}
+#news{
+    grid-area: news;
+    padding: 1rem;
+}
+#img1{
+    grid-area: img1;
+    padding: 1rem;
+}
+#img2{
+    grid-area: img2;
+    padding: 1rem;
+}
+#img3{
+    grid-area: img3;
+    padding: 1rem;
+}
+#footer{
+    grid-area: footer;
+    padding: 1rem;
+}
+@media (max-width:860px){
+    .myContainer{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "banner clock"
+        "signIn register"
+        "top news"
+        "img1 img2"
+        "img3 ."
+        "footer footer"
+    }
+}
+@media (max-width:605px){
+    .myContainer{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "banner"
+        "clock"
+        "signIn"
+        "register"
+        "top"
+        "news"
+        "img1"
+        "img2"
+        "img3"
+        "footer";
+    }
+}
